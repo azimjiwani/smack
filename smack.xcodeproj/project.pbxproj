@@ -25,6 +25,8 @@
 		0CA71403243D339700DB088A /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA71402243D339700DB088A /* AvatarPickerVC.swift */; };
 		0CA71405243D37AC00DB088A /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA71404243D37AC00DB088A /* AvatarCell.swift */; };
 		0CA71407243D553800DB088A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA71406243D553800DB088A /* CircleImage.swift */; };
+		0CA7140B244002E700DB088A /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA71409244002E700DB088A /* ProfileVC.swift */; };
+		0CA7140C244002E700DB088A /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA7140A244002E700DB088A /* ProfileVC.xib */; };
 		5441CED57A511386A3554F11 /* Pods_smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B5A672CE45712C0DE46CCD /* Pods_smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		0CA71402243D339700DB088A /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		0CA71404243D37AC00DB088A /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		0CA71406243D553800DB088A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		0CA71409244002E700DB088A /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		0CA7140A244002E700DB088A /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		19B5A672CE45712C0DE46CCD /* Pods_smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E36AF8A8CA56D67563171CB /* Pods-smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-smack/Pods-smack.release.xcconfig"; sourceTree = "<group>"; };
 		43C42EBF775AB4FC3EB1C345 /* Pods-smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smack/Pods-smack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		0C138984242FDEB6000A27F4 /* smack */ = {
 			isa = PBXGroup;
 			children = (
+				0CA7140D2440030700DB088A /* XIBs */,
 				0CA713FB24396B9000DB088A /* Services */,
 				0C3C610D243405EC0001D565 /* Utilities */,
 				0C1389AE24313995000A27F4 /* Model */,
@@ -123,6 +128,7 @@
 				0CA562FE2434187F00E2E3B5 /* LoginVC.swift */,
 				0C7A5A312436930300D95DF3 /* CreateAccountVC.swift */,
 				0CA71402243D339700DB088A /* AvatarPickerVC.swift */,
+				0CA71409244002E700DB088A /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +166,14 @@
 				0CA71400243C1B0500DB088A /* UserDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0CA7140D2440030700DB088A /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				0CA7140A244002E700DB088A /* ProfileVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		7008524F856942A3539FBFCE /* Frameworks */ = {
@@ -240,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA7140C244002E700DB088A /* ProfileVC.xib in Resources */,
 				0C138992242FDEBB000A27F4 /* LaunchScreen.storyboard in Resources */,
 				0C13898F242FDEBB000A27F4 /* Assets.xcassets in Resources */,
 				0C13898D242FDEB6000A27F4 /* Main.storyboard in Resources */,
@@ -302,6 +317,7 @@
 				0C138986242FDEB6000A27F4 /* AppDelegate.swift in Sources */,
 				0CA71405243D37AC00DB088A /* AvatarCell.swift in Sources */,
 				0CA71403243D339700DB088A /* AvatarPickerVC.swift in Sources */,
+				0CA7140B244002E700DB088A /* ProfileVC.swift in Sources */,
 				0CA562FF2434187F00E2E3B5 /* LoginVC.swift in Sources */,
 				0C3C610C2433F2B60001D565 /* GradientView.swift in Sources */,
 				0C138988242FDEB6000A27F4 /* SceneDelegate.swift in Sources */,
