@@ -116,12 +116,7 @@ class AuthService{
             
         ]
         
-        let header : HTTPHeaders = [
-            "Authorization" : "Bearer \(AuthService.instance.authToken)",
-            "Content-Type" : "application/json; charset = UTF-8"
-        ]
-        
-        AF.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header, interceptor: nil).responseJSON { (response) in
+        AF.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER, interceptor: nil).responseJSON { (response) in
             
             switch response.result {
                 case .success:
@@ -149,4 +144,32 @@ class AuthService{
         
     }
     
+    func findUserbyEmail (completion: @escaping CompletionHandler) {
+        
+        AF.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER, interceptor: nil).responseJSON { (response) in
+                    
+            switch response.result {
+                case .success:
+                    do {
+                        guard let data = response.data else { return }
+                        let json = try JSON(data: data)
+                        let id = json["_id"].stringValue
+                        let color = json["avatarColor"].stringValue
+                        let avatarName = json["avatarName"].stringValue
+                        let email = json["email"].stringValue
+                        let name = json["name"].stringValue
+                        
+                        UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+                        
+                    } catch {
+//                       print(error)
+                    }
+                    
+                    completion(true)
+                case let .failure(error):
+                    completion(false)
+                    debugPrint(response.result as Any)
+            }
+        }
+    }
 }

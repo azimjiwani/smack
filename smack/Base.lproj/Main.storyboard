@@ -226,6 +226,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="7ia-qt-iK4" eventType="touchUpInside" id="qpu-gt-PuZ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lVL-TY-Z8N">
                                 <rect key="frame" x="62.5" y="220" width="250" height="86"/>
@@ -280,9 +283,14 @@
                                     <action selector="createAccntBtnPressed:" destination="7ia-qt-iK4" eventType="touchUpInside" id="vmt-G7-UKV"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xbz-Ub-1m0">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="xbz-Ub-1m0" firstAttribute="centerY" secondItem="fpw-Fb-eu0" secondAttribute="centerY" constant="10" id="1hf-dy-LZm"/>
                             <constraint firstItem="w5u-Cp-d7i" firstAttribute="centerX" secondItem="fpw-Fb-eu0" secondAttribute="centerX" id="DYB-K8-kph"/>
                             <constraint firstItem="w5u-Cp-d7i" firstAttribute="top" secondItem="djG-mm-M88" secondAttribute="top" constant="60" id="EgO-uU-go1"/>
                             <constraint firstItem="lfF-x9-A02" firstAttribute="centerX" secondItem="fpw-Fb-eu0" secondAttribute="centerX" id="Fkj-ii-nin"/>
@@ -294,11 +302,15 @@
                             <constraint firstItem="I0c-HV-faV" firstAttribute="centerX" secondItem="fpw-Fb-eu0" secondAttribute="centerX" id="cV9-P5-mh5"/>
                             <constraint firstItem="lfF-x9-A02" firstAttribute="top" secondItem="I0c-HV-faV" secondAttribute="bottom" id="eCk-8R-igG"/>
                             <constraint firstItem="djG-mm-M88" firstAttribute="trailing" secondItem="Mgu-IE-Z5l" secondAttribute="trailing" constant="25" id="fpO-9u-CRH"/>
+                            <constraint firstItem="xbz-Ub-1m0" firstAttribute="centerX" secondItem="fpw-Fb-eu0" secondAttribute="centerX" id="qtj-RO-YEz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="djG-mm-M88"/>
                     </view>
                     <navigationItem key="navigationItem" id="ffs-h1-5zL"/>
                     <connections>
+                        <outlet property="passwordTxt" destination="Wct-lz-18V" id="0Qe-RO-1PG"/>
+                        <outlet property="spinner" destination="xbz-Ub-1m0" id="RXa-Gk-uH5"/>
+                        <outlet property="usernameTxt" destination="uxw-hz-jtJ" id="3SP-6q-6qG"/>
                         <segue destination="Mn1-Hn-kaq" kind="presentation" identifier="toCreateAccount" modalPresentationStyle="fullScreen" id="39A-iv-agj"/>
                     </connections>
                 </viewController>
