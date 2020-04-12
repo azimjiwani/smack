@@ -37,7 +37,7 @@ class MessageService {
                         } catch {
     //                       print(error)
                         }
-                        print(self.channels[0].channelTitle!)
+//                        print(self.channels[0].channelTitle!)
                         completion(true)
                     case let .failure(error):
                         completion(false)

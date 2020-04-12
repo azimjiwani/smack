@@ -26,7 +26,7 @@ class ChatVC: UIViewController {
             }
         }
         
-        MessageService.instance.findAllChannel { (succes) in
+        MessageService.instance.findAllChannel { (success) in
             
         }
         
